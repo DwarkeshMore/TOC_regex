@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- --------------------------------------------------------------HEAD---------------------------------------------------- ----->
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
+
+    <link rel="stylesheet" href="CSS/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <script src="script.js"></script>
+
+    <title>Racing Event Registration</title>
+</head>
+<!-- --------------------------------------------------------------BODY----------------------------------------------------- ----->
+
+<body>
+    <!-- -----------------------------SIDEMENU-- ----------------------------->
+    <div class="menu">
+        <table>
+            <tbody>
+                <tr>
+                    <td id="logo"> <img src="Images/apex-logo.png" alt="Apex Logo"></td>
+                </tr>
+                <tr>
+                    <td><a href="index.html">HOME</a></td>
+                </tr>
+
+                <tr>
+                    <td><a onclick="tableClick()">HISTORY</a></td>
+                </tr>
+
+                <tr>
+                    <!-- href="history.html" -->
+                    <td><a onclick='registerclick()'>REGISTER</a></td>
+                </tr>
+
+
+                <tr class="menu-last-cell">
+
+                </tr>
+            </tbody>
+        </table>
+        <a href="https://web.whatsapp.com/" target="_blank"> <img class="whatsapp" src="Images/Message-icon.png"></a>
+    </div>
+
+    <!-- -----------------------------HOME-- --------------------------------->
+    <div class="main-div" id="carosal">
+
+        <div id="demo" class="carousel slide" data-ride="carousel" style="width: 100%; height: 100%;">
+
+            <!-- Indicators -->
+            <ul class="carousel-indicators">
+                <li data-target="#demo" data-slide-to="0" class="active"></li>
+                <li data-target="#demo" data-slide-to="1"></li>
+                <li data-target="#demo" data-slide-to="2"></li>
+            </ul>
+
+            <!-- The slideshow -->
+            <div class="carousel-inner">
+                <div class="carousel-item active caro">
+                    <img src="Images/home_gif.gif" alt="gif">
+                    <div class="carousel-caption">
+                        <h1 style="color: whitesmoke;">WITNESS THE MOST ANTICIPATED BIKE RACING CHAMPIONSHIP OF THE YEAR
+                        </h1>
+                        <h4>Register Now!</h4>
+                    </div>
+                </div>
+                <div class="carousel-item caro">
+                    <img src="https://i.redd.it/h09hillxttl11.jpg" alt="track">
+
+                </div>
+                <div class="carousel-item caro">
+                    <img style="height: 49rem;" src="https://s3-eu-west-1.amazonaws.com/crash.net/visordown.com/field/image/84635.jpg" alt="New York">
+                    <div class="carousel-caption">
+                        <h1 style="color: whitesmoke;">GET COMPILIMENTARY LUNCH AND EXCLUSIVE CLUB BENEFITS</h1>
+                        <h4>Register Now!</h4>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Left and right controls -->
+            <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#demo" data-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </a>
+
+        </div>
+    </div>
+
+    <!-- -------------------------REGISTRATION FORM-- ------------------------>
+    <div class="main-div" id="register">
+        <img class="background-image"
+            src="https://www.shell.in/motorists/motorsports/shell-and-ducati/Shell-and-ducati-superbike-world-championship/_jcr_content/pagePromo/image.img.960.jpeg/1459541044597/superbike-racing-on-a-track.jpeg">
+        <div class="text-column">
+
+
+            <h1 style="text-align: center"> REGISTRATION FORM </h1>
+            <form name="RegForm" action="" onsubmit="if (registration()) window.location.reload();  return false;" method="post">
+
+                <p>Name: <input type="text" size=65 name="Name"> </p><br>
+
+                <p>E-mail Address: <input type="text" size=65 name="EMail"> </p><br>
+
+                <p>Mobile Number: <input type="text" size=65 name="Telephone"> </p><br>
+
+                <p>Age: <input type="text" size=65 name="Age"> </p><br>
+
+                <p>Invite Code (optional) :  <input type="text" size=65 name="Invite"> </p><br>
+
+                <p>Password :  <input type="password" size=65 name="Password"> </p><br>
+
+
+                <p>SELECT YOUR PASS TYPE &emsp;
+                    <select type="text" value="" name="pass">
+                        <option>PLATINUM</option>
+                        <option>GOLD</option>
+                        <option>SILVER</option>
+                    </select></p><br>
+
+                <div class="radio">
+                    MEAL TYPE &emsp;&emsp;&emsp;
+                    <label><input style="width: min-content;" type="radio" name="meal" value="veg" checked> Veg</label>
+                    &emsp;&emsp;
+                    <label><input style="width: min-content;" type="radio" name="meal" value="non-veg"> Non - Veg</label>
+                </div><br>
+                <br>
+                <p>Comments (optional): <textarea cols="55" name="Comment">  </textarea></p>
+
+                <input style="width: min-content;" type="checkbox" id="checkBox" name="agree">
+                <label for="checkBox"> I agree to the Terms and Conditions of Apex Racing</label>
+
+                <br>
+                <p><br>
+                    <input type="submit" value="REGISTER" name="Submit">
+                    <!-- <button type="submit">REGISTER</button> -->
+                    <input type="reset" value="RESET" name="Reset">
+                </p>
+            </form>
+        </div>
+    </div>
+    <!-- -------------------------REGISTRATION TABLE-- ------------------------>
+    <div class="main-div" id="table">
+                <img class="background-image" src="https://i.redd.it/h09hillxttl11.jpg">
+        <div class="text-column">
+
+            <h1>HISTORY</h1><br>
+            <p>Apex Racing Academy was established in the year 2011 by a few motorsport enthusiasts in India with a
+                vision to promote motorsports among younger generation. The team has been involved individually in
+                various aspects of motorsports for over a decade, Including racing in India National Championship for
+                two wheeler’s, providing support to various racing organizers. We have completed 4 years of academy
+                sessions this year, with over 1000 alumni students from various parts of the country.</p>
+            <p>Apex Racing India is proud to present its 2 Wheeler track racing & riding academy. The only round the
+                year racing academy in India covering all aspect of riding & racing including the rules / Regulations
+                framed by Federation of Motor Sports Clubs of India. Apex Racing Academy offers a professional racing
+                environment for beginning and seasoned riders alike – all centered around increasing the “fun factor” in
+                a safety-conscious atmosphere.</p>
+            <p>We are dedicated to helping the new rider learn the basic skills necessary for a successful racing career,
+                 as well as tutoring the experienced racer who needs the competitive edge to get to the front of the grid
+                  and we also welcome the street riding enthusiast who would like to improve their everyday riding skills
+                   and experience the race track in a non-racing environment.</p>
+            <p>If you’re ready to roll, the Apex Racing Academy is the place to begin. You’ll start off in the classroom,
+                 where the certified Academy coaches introduce you to your bike and teach you the basic safety aspects involved.
+                  Apex Racing Academy is the nation’s top choice for motorcycle education. Whether you have never touched a motorcycle,
+                   or you have been riding for years with or without your endorsement, this is the school for you! Also this is your
+                    ramp to enter the exciting racing career all around the globe.</p>
+        </div>
+    </div>
+</body>
+
+</html>
